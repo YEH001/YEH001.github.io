@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>Unity:PokemonGo(一) | YEETIN�Ĳ���</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="关于Unity和高德地图配置">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Unity:PokemonGo(一)">
+<meta property="og:url" content="http://example.com/2023/06/03/PokemonGo(%E4%B8%80)/index.html">
+<meta property="og:site_name" content="YEETIN�Ĳ���">
+<meta property="og:description" content="关于Unity和高德地图配置">
+<meta property="og:locale">
+<meta property="article:published_time" content="2023-06-03T02:00:39.000Z">
+<meta property="article:modified_time" content="2023-06-06T14:21:48.000Z">
+<meta property="article:author" content="yeetin">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="YEETIN�Ĳ���" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/favicon.png">
+  
+  
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/typeface-source-code-pro@0.0.71/index.min.css">
+
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+  
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">YEETIN�Ĳ���</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"><span class="fa fa-bars"></span></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+        
+          <a class="nav-icon" href="/atom.xml" title="RSS Feed"><span class="fa fa-rss"></span></a>
+        
+        <a class="nav-icon nav-search-btn" title="Suche"><span class="fa fa-search"></span></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Suche"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://example.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="post-PokemonGo(一)" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2023/06/03/PokemonGo(%E4%B8%80)/" class="article-date">
+  <time class="dt-published" datetime="2023-06-03T02:00:39.000Z" itemprop="datePublished">2023-06-03</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="p-name article-title" itemprop="headline name">
+      Unity:PokemonGo(一)
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <p>关于Unity和高德地图配置</p>
+<span id="more"></span>
+
+<h3 id="一、获取高德SDK"><a href="#一、获取高德SDK" class="headerlink" title="一、获取高德SDK"></a>一、获取高德SDK</h3><p>详见 <a target="_blank" rel="noopener" href="https://lbs.amap.com/api/android-location-sdk/locationsummary/">https://lbs.amap.com/api/android-location-sdk/locationsummary/</a></p>
+<p>高德地图显示地图</p>
+<p>AndroidManifest.xml</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br></pre></td><td class="code"><pre><span class="line">&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;</span><br><span class="line">&lt;manifest xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot;</span><br><span class="line">    package=&quot;com.njust.locationtest&quot;&gt;</span><br><span class="line">    &lt;!--允许程序打开网络套接字--&gt;</span><br><span class="line">    &lt;uses-permission android:name=&quot;android.permission.INTERNET&quot; /&gt;</span><br><span class="line">    &lt;!--允许程序设置内置sd卡的写权限--&gt;</span><br><span class="line">    &lt;uses-permission android:name=&quot;android.permission.WRITE_EXTERNAL_STORAGE&quot; /&gt;</span><br><span class="line">    &lt;!--允许程序获取网络状态--&gt;</span><br><span class="line">    &lt;uses-permission android:name=&quot;android.permission.ACCESS_NETWORK_STATE&quot; /&gt;</span><br><span class="line">    &lt;!--允许程序访问WiFi网络信息--&gt;</span><br><span class="line">    &lt;uses-permission android:name=&quot;android.permission.ACCESS_WIFI_STATE&quot; /&gt;</span><br><span class="line">    &lt;!--允许程序读写手机状态和身份--&gt;</span><br><span class="line">    &lt;uses-permission android:name=&quot;android.permission.READ_PHONE_STATE&quot; /&gt;</span><br><span class="line">    &lt;!--允许程序访问CellID或WiFi热点来获取粗略的位置--&gt;</span><br><span class="line">    &lt;uses-permission android:name=&quot;android.permission.ACCESS_COARSE_LOCATION&quot; /&gt;</span><br><span class="line">    &lt;!--允许获取精确位置，精准定位必选--&gt;</span><br><span class="line">    &lt;uses-permission android:name=&quot;android.permission.ACCESS_FINE_LOCATION&quot; /&gt;</span><br><span class="line">    &lt;!--允许获取设备和运营商信息，用于问题排查和网络定位（无gps情况下的定位），若需网络定位功能则必选--&gt;</span><br><span class="line">    &lt;uses-permission android:name=&quot;android.permission.READ_PHONE_STATE&quot; /&gt;</span><br><span class="line">    &lt;!--允许获取网络状态，用于网络定位（无gps情况下的定位），若需网络定位功能则必选--&gt;</span><br><span class="line">    &lt;uses-permission android:name=&quot;android.permission.ACCESS_NETWORK_STATE&quot; /&gt;</span><br><span class="line">    &lt;!--允许获取wifi网络信息，用于网络定位（无gps情况下的定位），若需网络定位功能则必选--&gt;</span><br><span class="line">    &lt;uses-permission android:name=&quot;android.permission.ACCESS_WIFI_STATE&quot; /&gt;</span><br><span class="line">    &lt;!--允许获取wifi状态改变，用于网络定位（无gps情况下的定位），若需网络定位功能则必选--&gt;</span><br><span class="line">    &lt;uses-permission android:name=&quot;android.permission.CHANGE_WIFI_STATE&quot; /&gt;</span><br><span class="line">    &lt;!--如果设置了target &gt;= 28 如果需要启动后台定位则必须声明这个权限--&gt;</span><br><span class="line">    &lt;uses-permission android:name=&quot;android.permission.FOREGROUND_SERVICE&quot;/&gt;</span><br><span class="line">    &lt;!--后台获取位置信息，若需后台定位则必选--&gt;</span><br><span class="line">    &lt;uses-permission android:name=&quot;android.permission.ACCESS_BACKGROUND_LOCATION&quot; /&gt;</span><br><span class="line">    &lt;!--用于申请调用A-GPS模块,卫星定位加速--&gt;</span><br><span class="line">    &lt;uses-permission android:name=&quot;android.permission.ACCESS_LOCATION_EXTRA_COMMANDS&quot; /&gt;</span><br><span class="line">    &lt;application</span><br><span class="line">        android:allowBackup=&quot;true&quot;</span><br><span class="line">        android:icon=&quot;@mipmap/ic_launcher&quot;</span><br><span class="line">        android:label=&quot;@string/app_name&quot;</span><br><span class="line">        android:roundIcon=&quot;@mipmap/ic_launcher_round&quot;</span><br><span class="line">        android:supportsRtl=&quot;true&quot;</span><br><span class="line">        android:theme=&quot;@style/Theme.LocationTest&quot;&gt;</span><br><span class="line">        &lt;meta-data android:name=&quot;com.amap.api.v2.apikey&quot; android:value=&quot;dc9e54fb7b82ae1ef377242ea7e85517&quot;&gt;&lt;/meta-data&gt;</span><br><span class="line">        &lt;service android:name=&quot;com.amap.api.location.APSService&quot;&gt;&lt;/service&gt;</span><br><span class="line">        &lt;activity</span><br><span class="line">            android:name=&quot;.MainActivity&quot;</span><br><span class="line">            android:exported=&quot;true&quot;&gt;</span><br><span class="line">            &lt;intent-filter&gt;</span><br><span class="line">                &lt;action android:name=&quot;android.intent.action.MAIN&quot; /&gt;</span><br><span class="line"></span><br><span class="line">                &lt;category android:name=&quot;android.intent.category.LAUNCHER&quot; /&gt;</span><br><span class="line">            &lt;/intent-filter&gt;</span><br><span class="line">        &lt;/activity&gt;</span><br><span class="line">        &lt;activity</span><br><span class="line">            android:name=&quot;.LocationActivity&quot;</span><br><span class="line">            android:exported=&quot;true&quot;&gt;</span><br><span class="line">            &lt;intent-filter&gt;</span><br><span class="line">                &lt;action android:name=&quot;android.intent.action.MAIN&quot; /&gt;</span><br><span class="line"></span><br><span class="line">                &lt;category android:name=&quot;android.intent.category.LAUNCHER&quot; /&gt;</span><br><span class="line">            &lt;/intent-filter&gt;</span><br><span class="line">        &lt;/activity&gt;</span><br><span class="line">    &lt;/application&gt;</span><br><span class="line"></span><br><span class="line">&lt;/manifest&gt;</span><br></pre></td></tr></table></figure>
+
+<p>LocationActivity 实现定位</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br></pre></td><td class="code"><pre><span class="line">package com.njust.locationtest;</span><br><span class="line"></span><br><span class="line">import android.Manifest;</span><br><span class="line">import android.annotation.TargetApi;</span><br><span class="line">import android.app.Activity;</span><br><span class="line">import android.content.pm.PackageManager;</span><br><span class="line">import android.icu.text.SimpleDateFormat;</span><br><span class="line">import android.os.Build;</span><br><span class="line">import android.os.Bundle;</span><br><span class="line">import android.util.Log;</span><br><span class="line">import android.widget.TextView;</span><br><span class="line">import android.widget.Toast;</span><br><span class="line"></span><br><span class="line">import androidx.core.app.ActivityCompat;</span><br><span class="line">import androidx.core.content.ContextCompat;</span><br><span class="line"></span><br><span class="line">import com.amap.api.location.AMapLocation;</span><br><span class="line">import com.amap.api.location.AMapLocationClient;</span><br><span class="line">import com.amap.api.location.AMapLocationClientOption;</span><br><span class="line">import com.amap.api.location.AMapLocationListener;</span><br><span class="line"></span><br><span class="line">import java.util.Date;</span><br><span class="line"></span><br><span class="line">public class LocationActivity extends Activity implements AMapLocationListener &#123;</span><br><span class="line">    private static final int MY_PERMISSIONS_REQUEST_CALL_LOCATION = 1;</span><br><span class="line">    public AMapLocationClient mlocationClient;</span><br><span class="line">    public AMapLocationClientOption mLocationOption = null;</span><br><span class="line">    public TextView location;</span><br><span class="line">    @Override</span><br><span class="line">    protected void onCreate(Bundle savedInstanceState) &#123;</span><br><span class="line">        super.onCreate(savedInstanceState);</span><br><span class="line">        setContentView(R.layout.activity_location);</span><br><span class="line">        location = (TextView) findViewById(R.id.TV_LOCATION2);</span><br><span class="line">        //使用定位前设置隐私合规</span><br><span class="line">        AMapLocationClient.updatePrivacyShow(this,true,true);</span><br><span class="line">        AMapLocationClient.updatePrivacyAgree(this,true);</span><br><span class="line">        //检查版本是否大于M</span><br><span class="line">        if (Build.VERSION.SDK_INT &gt;= Build.VERSION_CODES.M) &#123;</span><br><span class="line">            if (ContextCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED) &#123;</span><br><span class="line">                ActivityCompat.requestPermissions(this,</span><br><span class="line">                        new String[]&#123;Manifest.permission.ACCESS_FINE_LOCATION&#125;,</span><br><span class="line">                        MY_PERMISSIONS_REQUEST_CALL_LOCATION);</span><br><span class="line">            &#125; else &#123;</span><br><span class="line">                //&quot;权限已申请&quot;;</span><br><span class="line">                showLocation();</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">    @Override</span><br><span class="line">    public void onRequestPermissionsResult(int requestCode, String[] permissions, int[] grantResults) &#123;</span><br><span class="line">        if (requestCode == MY_PERMISSIONS_REQUEST_CALL_LOCATION) &#123;</span><br><span class="line">            if (grantResults[0] == PackageManager.PERMISSION_GRANTED) &#123;</span><br><span class="line">                //&quot;权限已申请&quot;</span><br><span class="line">                showLocation();</span><br><span class="line">            &#125; else &#123;</span><br><span class="line">                Toast.makeText(getBaseContext(),&quot;权限已拒绝,不能定位&quot;,Toast.LENGTH_SHORT).show();</span><br><span class="line"></span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        super.onRequestPermissionsResult(requestCode, permissions, grantResults);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    // TODO:</span><br><span class="line">    private void showLocation() &#123;</span><br><span class="line">        try &#123;</span><br><span class="line">            mlocationClient = new AMapLocationClient(this);</span><br><span class="line">            mLocationOption = new AMapLocationClientOption();</span><br><span class="line">            mlocationClient.setLocationListener(this);</span><br><span class="line">            //设置定位模式为高精度模式，Battery_Saving为低功耗模式，Device_Sensors是仅设备模式</span><br><span class="line">            mLocationOption.setLocationMode(AMapLocationClientOption.AMapLocationMode.Hight_Accuracy);</span><br><span class="line">            mLocationOption.setInterval(1000);</span><br><span class="line">            //设置定位参数</span><br><span class="line">            mlocationClient.setLocationOption(mLocationOption);</span><br><span class="line">            //启动定位</span><br><span class="line">            mlocationClient.startLocation();</span><br><span class="line">        &#125; catch (Exception e) &#123;</span><br><span class="line"></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    @TargetApi(24)</span><br><span class="line">    @Override</span><br><span class="line">    public void onLocationChanged(AMapLocation amapLocation) &#123;</span><br><span class="line">        try &#123;</span><br><span class="line">            if (amapLocation != null) &#123;</span><br><span class="line">                StringBuffer dz = new StringBuffer();</span><br><span class="line">                if (amapLocation.getErrorCode() == 0) &#123;</span><br><span class="line">                    //定位成功回调信息，设置相关消息</span><br><span class="line">                    Toast.makeText(getBaseContext(),&quot;收到定位&quot;,Toast.LENGTH_SHORT).show();</span><br><span class="line">                    //获取当前定位结果来源，如网络定位结果，详见定位类型表</span><br><span class="line">                    dz.append(&quot;定位类型:  &quot;+ amapLocation.getLocationType() + &quot;\n&quot;);</span><br><span class="line">                    dz.append(&quot;获取纬度:  &quot;+ amapLocation.getLatitude() + &quot;\n&quot;);</span><br><span class="line">                    dz.append(&quot;获取经度:  &quot;+ amapLocation.getLongitude() + &quot;\n&quot;);</span><br><span class="line">                    dz.append(&quot;获取精度信息:  &quot;+ amapLocation.getAccuracy() + &quot;\n&quot;);</span><br><span class="line"></span><br><span class="line">                    //如果option中设置isNeedAddress为false，则没有此结果，网络定位结果中会有地址信息，GPS定位不返回地址信息。</span><br><span class="line">                    dz.append(&quot;地址:  &quot;+ amapLocation.getAddress() + &quot;\n&quot;);</span><br><span class="line">                    dz.append(&quot;国家信息:  &quot;+ amapLocation.getCountry() + &quot;\n&quot;);</span><br><span class="line">                    dz.append(&quot;省信息:  &quot;+ amapLocation.getProvince() + &quot;\n&quot;);</span><br><span class="line">                    dz.append(&quot;城市信息:  &quot;+ amapLocation.getCity() + &quot;\n&quot;);</span><br><span class="line">                    dz.append(&quot;城区信息:  &quot;+ amapLocation.getDistrict() + &quot;\n&quot;);</span><br><span class="line">                    dz.append(&quot;街道信息:  &quot;+ amapLocation.getStreet() + &quot;\n&quot;);</span><br><span class="line">                    dz.append(&quot;获取当前定位点的AOI信息:  &quot;+ amapLocation.getAoiName() + &quot;\n&quot;);</span><br><span class="line">                    dz.append(&quot;获取GPS的当前状态:  &quot;+ amapLocation.getGpsAccuracyStatus() + &quot;\n&quot;);</span><br><span class="line">                    //获取定位时间</span><br><span class="line">                    SimpleDateFormat df = new SimpleDateFormat(&quot;yyyy-MM-dd HH:mm:ss&quot;);</span><br><span class="line">                    Date date = new Date(amapLocation.getTime());</span><br><span class="line">                    dz.append(&quot;获取定位时间:  &quot;+  df.format(date)+ &quot;\n&quot;);</span><br><span class="line">                    location.setText(dz);</span><br><span class="line">                    // 停止定位</span><br><span class="line">                    //mlocationClient.stopLocation();</span><br><span class="line">                &#125; else &#123;</span><br><span class="line">                    //定位失败时，可通过ErrCode（错误码）信息来确定失败的原因，errInfo是错误信息，详见错误码表。</span><br><span class="line">                    Log.e(&quot;AmapError&quot;, &quot;location Error, ErrCode:&quot;</span><br><span class="line">                            + amapLocation.getErrorCode() + &quot;, errInfo:&quot;</span><br><span class="line">                            + amapLocation.getErrorInfo());</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">            else&#123;</span><br><span class="line">                Toast.makeText(getBaseContext(),&quot;定位失败&quot;,Toast.LENGTH_SHORT).show();</span><br><span class="line"></span><br><span class="line">            &#125;</span><br><span class="line">        &#125; catch (Exception e) &#123;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    @Override</span><br><span class="line">    protected void onStop() &#123;</span><br><span class="line">        super.onStop();</span><br><span class="line">        // 停止定位</span><br><span class="line">        if (null != mlocationClient) &#123;</span><br><span class="line">            mlocationClient.stopLocation();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    /**</span><br><span class="line">     * 销毁定位</span><br><span class="line">     */</span><br><span class="line">    private void destroyLocation() &#123;</span><br><span class="line">        if (null != mlocationClient) &#123;</span><br><span class="line">            /**</span><br><span class="line">             * 如果AMapLocationClient是在当前Activity实例化的，</span><br><span class="line">             * 在Activity的onDestroy中一定要执行AMapLocationClient的onDestroy</span><br><span class="line">             */</span><br><span class="line">            mlocationClient.onDestroy();</span><br><span class="line">            mlocationClient = null;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    @Override</span><br><span class="line">    protected void onDestroy() &#123;</span><br><span class="line">        destroyLocation();</span><br><span class="line">        super.onDestroy();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>MainActivity 显示地图</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br></pre></td><td class="code"><pre><span class="line">package com.njust.locationtest;</span><br><span class="line"></span><br><span class="line">import android.annotation.TargetApi;</span><br><span class="line">import android.app.Activity;</span><br><span class="line">import android.content.Intent;</span><br><span class="line">import android.icu.text.SimpleDateFormat;</span><br><span class="line">import android.location.Location;</span><br><span class="line">import android.os.Bundle;</span><br><span class="line">import android.util.Log;</span><br><span class="line">import android.view.View;</span><br><span class="line">import android.widget.TextView;</span><br><span class="line">import android.widget.Toast;</span><br><span class="line"></span><br><span class="line">import com.amap.api.location.AMapLocation;</span><br><span class="line">import com.amap.api.location.AMapLocationListener;</span><br><span class="line">import com.amap.api.maps.AMap;</span><br><span class="line">import com.amap.api.maps.MapView;</span><br><span class="line">import com.amap.api.maps.MapsInitializer;</span><br><span class="line">import com.amap.api.maps.model.MyLocationStyle;</span><br><span class="line"></span><br><span class="line">import java.util.Date;</span><br><span class="line"></span><br><span class="line">public class MainActivity extends Activity implements AMapLocationListener &#123;</span><br><span class="line">    //显示地图</span><br><span class="line">    private MapView mapView;</span><br><span class="line">    private AMap aMap;</span><br><span class="line">    public TextView loca;</span><br><span class="line">    @Override</span><br><span class="line">    protected void onCreate(Bundle savedInstanceState) &#123;</span><br><span class="line">        super.onCreate(savedInstanceState);</span><br><span class="line">        setContentView(R.layout.activity_main);</span><br><span class="line">        loca = (TextView) findViewById(R.id.TV_LOCATION);</span><br><span class="line">        //使用地图前设置隐私合规</span><br><span class="line">        MapsInitializer.updatePrivacyShow(this,true,true);</span><br><span class="line">        MapsInitializer.updatePrivacyAgree(this,true);</span><br><span class="line">        //获取地图控件引用</span><br><span class="line">        mapView = (MapView) findViewById(R.id.map);</span><br><span class="line">        //在activity执行onCreate时执行mMapView.onCreate(savedInstanceState)，创建地图</span><br><span class="line">        mapView.onCreate(savedInstanceState);</span><br><span class="line">        //显示地图</span><br><span class="line">        if(aMap==null)&#123;</span><br><span class="line">            aMap = mapView.getMap();</span><br><span class="line">        &#125;</span><br><span class="line">        //显示蓝点</span><br><span class="line">        MyLocationStyle myLocationStyle;</span><br><span class="line">        //初始化定位蓝点样式类myLocationStyle.myLocationType(MyLocationStyle.LOCATION_TYPE_LOCATION_ROTATE);</span><br><span class="line">        //连续定位、且将视角移动到地图中心点，定位点依照设备方向旋转，并且会跟随设备移动。（1秒1次定位）如果不设置myLocationType，默认也会执行此种模式。</span><br><span class="line">        myLocationStyle = new MyLocationStyle();</span><br><span class="line">        //设置连续定位模式下的定位间隔，只在连续定位模式下生效，单次定位模式下不会生效。单位为毫秒。</span><br><span class="line">        myLocationStyle.interval(2000);</span><br><span class="line">        //设置定位蓝点的Style</span><br><span class="line">        aMap.setMyLocationStyle(myLocationStyle);</span><br><span class="line">        // 设置为true表示启动显示定位蓝点，false表示隐藏定位蓝点并不进行定位，默认是false。</span><br><span class="line">        aMap.setMyLocationEnabled(true);</span><br><span class="line">        myLocationStyle.showMyLocation(true);</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">    @TargetApi(24)</span><br><span class="line">    @Override</span><br><span class="line">    public void onLocationChanged(AMapLocation location) &#123;</span><br><span class="line">        //从location对象中获取经纬度信息，地址描述信息，建议拿到位置之后调用逆地理编码接口获取（获取地址描述数据章节有介绍）</span><br><span class="line">        try &#123;</span><br><span class="line">            if (location != null) &#123;</span><br><span class="line">                StringBuffer dz = new StringBuffer();</span><br><span class="line">                //定位成功回调信息，设置相关消息</span><br><span class="line">                Toast.makeText(getBaseContext(),&quot;收到定位&quot;,Toast.LENGTH_SHORT).show();</span><br><span class="line">                //获取当前定位结果来源，如网络定位结果，详见定位类型表</span><br><span class="line">                dz.append(&quot;获取纬度:  &quot;+ location.getLatitude() + &quot;\n&quot;);</span><br><span class="line">                dz.append(&quot;获取经度:  &quot;+ location.getLongitude() + &quot;\n&quot;);</span><br><span class="line">                dz.append(&quot;获取精度信息:  &quot;+ location.getAccuracy() + &quot;\n&quot;);</span><br><span class="line">                loca.setText(dz);</span><br><span class="line">                &#125; else &#123;</span><br><span class="line">                    //定位失败时，可通过ErrCode（错误码）信息来确定失败的原因，errInfo是错误信息，详见错误码表。</span><br><span class="line">                    Log.e(&quot;AmapError&quot;, &quot;location Error, ErrCode:&quot;</span><br><span class="line">                            + location.getErrorCode() + &quot;, errInfo:&quot;</span><br><span class="line">                            + location.getErrorInfo());</span><br><span class="line">                &#125;</span><br><span class="line">        &#125; catch (Exception e) &#123;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    public void startLocation(View view) &#123;</span><br><span class="line">        startActivity(new Intent(this, LocationActivity.class));</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    @Override</span><br><span class="line">    protected void onDestroy() &#123;</span><br><span class="line">        super.onDestroy();</span><br><span class="line">        //在activity执行onDestroy时执行mMapView.onDestroy()，销毁地图</span><br><span class="line">        mapView.onDestroy();</span><br><span class="line">    &#125;</span><br><span class="line">    @Override</span><br><span class="line">    protected void onResume() &#123;</span><br><span class="line">        super.onResume();</span><br><span class="line">        //在activity执行onResume时执行mMapView.onResume ()，重新绘制加载地图</span><br><span class="line">        mapView.onResume();</span><br><span class="line">    &#125;</span><br><span class="line">    @Override</span><br><span class="line">    protected void onPause() &#123;</span><br><span class="line">        super.onPause();</span><br><span class="line">        //在activity执行onPause时执行mMapView.onPause ()，暂停地图的绘制</span><br><span class="line">        mapView.onPause();</span><br><span class="line">    &#125;</span><br><span class="line">    @Override</span><br><span class="line">    protected void onSaveInstanceState(Bundle outState) &#123;</span><br><span class="line">        super.onSaveInstanceState(outState);</span><br><span class="line">        //在activity执行onSaveInstanceState时执行mMapView.onSaveInstanceState (outState)，保存地图当前的状态</span><br><span class="line">        mapView.onSaveInstanceState(outState);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>导包</p>
+<p>libs导入jar包，jniLibs导入so库</p>
+<p>以上，在AndroidStudio中可顺利获取地图和经纬度。</p>
+<p>但是！！！由于地图对Unity支持度不高，所以打包转unity什么的很麻烦，所以暂时采用Unity 中 Gomap插件进行地图的导入。</p>
+<h2 id="二、引入GoMap插件"><a href="#二、引入GoMap插件" class="headerlink" title="二、引入GoMap插件"></a>二、引入GoMap插件</h2><h6 id="1-导入插件"><a href="#1-导入插件" class="headerlink" title="1.导入插件"></a>1.导入插件</h6><p>新建Unity 工程，导入GoMap插件及输入密钥</p>
+<ol start="2">
+<li></li>
+</ol>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2023/06/03/PokemonGo(%E4%B8%80)/" data-id="clinhzjbz0000ggsd2i7m093w" data-title="Unity:PokemonGo(一)" class="article-share-link"><span class="fa fa-share">Teilen</span></a>
+      
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2023/06/03/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Älter</strong>
+      <div class="article-nav-title">hello world</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archiv</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/06/">June 2023</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">letzter Beitrag</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2023/06/03/PokemonGo(%E4%B8%80)/">Unity:PokemonGo(一)</a>
+          </li>
+        
+          <li>
+            <a href="/2023/06/03/hello-world/">hello world</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+      &copy; 2023 yeetin<br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+
+<script src="/js/jquery-3.6.4.min.js"></script>
+
+
+
+  
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+
+  </div>
+</body>
+</html>
