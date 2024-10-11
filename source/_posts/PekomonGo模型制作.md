@@ -1,11 +1,14 @@
 ---
-title: PekomonGo模型制作
+title: PokemonGo模型制作
 date: 2023-06-12 17:11:55
-tags: 游戏开发
-categories: Unity
+tags: 
+- Unity
+- PokemonGo
+categories: 
+- 游戏开发
 ---
 
-获取宝可梦模型
+获取宝可梦游戏模型
 
 <!-- more -->
 

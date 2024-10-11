@@ -10,13 +10,12 @@ categories: 日志管理
 <!-- more -->
 
 ### github 提交方法
-
 #### 1.本地提交到main
 
 ```
 git init #已经初始化就不需要
 git status #查看未追踪文件，非必要
-git add xxx
+git add xxx /git add .
 git status #查看未提交文件，非必要
 git commit -m "注释"
 git status #查看文件是否提交，非必要
@@ -50,6 +49,6 @@ hexo s #在本地服务器查看
 #### 3.新建页面
 
 ```
-hexo n page menu #新建页面，地址为：主页地址/aboutme/
+hexo new page xxx #新建页面，地址为：主页地址/aboutme/
 ```
 
