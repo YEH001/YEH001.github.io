@@ -60,5 +60,3 @@ git commit -m "XXXX"
 hexo d 
 git push origin hexo
 ```
-
-### 
