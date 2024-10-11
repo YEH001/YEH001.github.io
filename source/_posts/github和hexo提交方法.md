@@ -10,7 +10,7 @@ categories: 日志管理
 <!-- more -->
 
 ### github 提交方法
-#### 1.本地提交到main
+#### 本地提交到main
 
 ```
 git init #已经初始化就不需要
@@ -25,19 +25,17 @@ git pull
 git push -u origin main #提交到main
 ```
 
-
-
 ### hexo提交方法
 
 在cmd中cd到blog/xxx文件里面
 
-#### 1.新建文章
+#### 新建文章
 
 ```
 hexo new "articleName"
 ```
 
-#### 2.上传博客
+#### 上传博客
 
 ```
 hexo clean
@@ -46,9 +44,21 @@ hexo d
 hexo s #在本地服务器查看
 ```
 
-#### 3.新建页面
+#### 新建页面
 
 ```
 hexo new page xxx #新建页面，地址为：主页地址/aboutme/
 ```
 
+#### 多终端提交日志
+
+```
+git pull origin hexo
+hexo new post "new post name"
+git add source
+git commit -m "XXXX"
+hexo d 
+git push origin hexo
+```
+
+### 
