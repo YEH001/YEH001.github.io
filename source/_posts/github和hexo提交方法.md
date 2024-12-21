@@ -60,3 +60,14 @@ git commit -m "XXXX"
 hexo d 
 git push origin hexo
 ```
+
+#### 提交源代码合并到hexo分支
+
+```
+git checkout hexo
+git merge hexo
+git add .
+git commit -a -m 'xxxx'
+git push hexo
+```
+

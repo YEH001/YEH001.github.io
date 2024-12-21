@@ -1,3 +1,15 @@
+---
+title: leetcode刷题
+date: 2024-12-21 14:21:52
+tags:
+- Algorithm
+categories: 算法与数据结构
+---
+
+刷题遇到的一些通用解决方法
+
+<!-- more -->
+
 ## Leetcode刷题
 
 ### 分割数组

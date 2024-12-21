@@ -8,6 +8,10 @@ categories: 图形学
 
 # GAMES 系列学习笔记
 
+记录GAMES课程中的学习笔记
+
+<!-- more -->
+
 ## GAMES001 图形学中的数学
 
 几何代数、数值方法、微分方程(物理模拟)、优化拓扑(场景模拟)
@@ -141,3 +145,61 @@ C++提供的标准化容器高频存取会导致内存碎片化，单纯扩大�
 ###### Hardware Architeture
 
 兼容平台、PC的游戏需要考虑硬件结构
+
+### 构建游戏世界
+
+#### 组成
+
+##### Dynamic Game Objects 动态物
+
+##### Static Game Objects 静态物体
+
+##### Environments 环境
+
+###### 地形系统
+
+###### 植被
+
+###### 天空
+
+##### Other
+
+###### Rule 规则
+
+###### Air wall 空气墙
+
+###### TriggerArea 
+
+###### Navigation Mesh 
+
+#### GameObject
+
+##### property 属性
+
+##### Behavior 行为
+
+组件化
+
+##### Interact 交互
+
+使用Event
+
+##### Scene Management 场景管理
+
+###### query
+
+unique game object ID
+
+object position
+
+###### Spatial Data Structures
+
+Hierarchical Segmentation Method
+
+BVH
+
+Binary Space Partitioning
+
+Octree
+
+Scene Graph
