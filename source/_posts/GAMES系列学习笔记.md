@@ -6,6 +6,8 @@ tags:
 categories: 图形学
 ---
 
+# GAMES 系列学习笔记
+
 记录GAMES课程中的学习笔记
 
 <!-- more -->
@@ -83,6 +85,10 @@ $$
 ### 微分方程
 
 ### 优化拓扑
+
+## GAMES101
+
+
 
 ## GAMES104 现代游戏引擎
 
@@ -184,15 +190,13 @@ C++提供的标准化容器高频存取会导致内存碎片化，单纯扩大�
 
 ##### Scene Management 场景管理
 
-###### query
+###### query 查询场景物体
 
 unique game object ID
 
 object position
 
-###### Spatial Data Structures
-
-Hierarchical Segmentation Method
+###### Spatial Data Structures/Hierarchical Segmentation Method 空间数据结构/多层分割
 
 BVH
 
@@ -201,3 +205,38 @@ Binary Space Partitioning
 Octree
 
 Scene Graph
+
+### 引擎绘制系统
+
+#### 渲染概述
+
+##### 四大难题
+
+多类型物体集中绘制
+
+显卡的复杂结构
+
+稳定帧率
+
+硬件计算资源占用
+
+##### Hardware architecture 硬件结构
+
+
+
+##### Render data organization
+
+##### Visibility
+
+#### Materials，Shaders and Lighting
+
+#### Special Rendering
+
+##### Terrain 地形系统
+
+##### Sky/Fog 天气系统
+
+##### Postprocess 后处理系统
+
+#### Pipeline
+
