@@ -1,0 +1,4 @@
+git add source
+git commit -m "new post"
+hexo d # 更新服务器上的博文
+git push origin hexo # 上传github的hexo分支
