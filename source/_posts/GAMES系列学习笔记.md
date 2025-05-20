@@ -6,8 +6,6 @@ tags:
 categories: 图形学
 ---
 
-# GAMES 系列学习笔记
-
 记录GAMES课程中的学习笔记
 
 <!-- more -->
